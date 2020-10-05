@@ -1,0 +1,65 @@
+// 全局公共样式
+html,
+body,
+#root {
+    max-width: 750PX;
+    height: 100%;
+}
+
+#root {
+    background-color: $color-theme;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+
+.router-view {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* 路由前进时的入场/离场动画 */
+.forward-enter {
+    transform: translateX(100%);
+}
+
+.forward-enter-active {
+    transform: translateX(0);
+    transition: all 300ms;
+}
+
+.forward-exit {
+    transform: translateX(0);
+}
+
+.forward-exit-active {
+    transform: translateX(-100%);
+    transition: all 300ms;
+}
+
+/* 路由后退时的入场/离场动画 */
+.back-enter {
+    transform: translateX(-100%);
+}
+
+.back-enter-active {
+    transform: translateX(0);
+    transition: all 300ms;
+}
+
+.back-exit {
+    transform: translateX(0);
+}
+
+.back-exit-active {
+    transform: translate(100%);
+    transition: all 300ms;
+}
